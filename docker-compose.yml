@@ -1,0 +1,33 @@
+version: "3"
+
+services:
+  mongo_db:
+    container_name: database_container
+    image: mongo:latest
+    restart: always
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_db:/data/db
+    networks:
+      - app-network
+
+  app:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      APP_NAME: CRUD-project-with-docker
+      PORT: 3000
+      DB_URI: mongodb://host.docker.internal:27017/crud_project
+    depends_on:
+      - mongo_db
+    networks:
+      - app-network
+
+volumes:
+  mongo_db: {}
+
+networks:
+  app-network:
+    driver: bridge
