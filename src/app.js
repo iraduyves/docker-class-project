@@ -51,7 +51,6 @@ app.use("/api/v1/api-docs", swaggerUI.serve, swaggerUI.setup(specs));
 app.use("/api/v1/api-docs", swaggerUI.serve, swaggerUI.setup(specs));
 app.use("/api/v1/api-docs", swaggerUI.serve, swaggerUI.setup(specs));
 app.use("/api/v1/api-docs", swaggerUI.serve, swaggerUI.setup(specs));
-app.use("/api/v1/api-docs", swaggerUI.serve, swaggerUI.setup(specs));
 
 app.get('/', (req, res) => {
     res.send('Welcome to the CRUD API WITH MONGO DB HOSTED ON DOCKER');
