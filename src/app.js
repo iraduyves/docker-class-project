@@ -53,7 +53,6 @@ app.use("/api/v1/api-docs", swaggerUI.serve, swaggerUI.setup(specs));
 app.use("/api/v1/api-docs", swaggerUI.serve, swaggerUI.setup(specs));
 app.use("/api/v1/api-docs", swaggerUI.serve, swaggerUI.setup(specs));
 app.use("/api/v1/api-docs", swaggerUI.serve, swaggerUI.setup(specs));
-app.use("/api/v1/api-docs", swaggerUI.serve, swaggerUI.setup(specs));
 
 
 app.get('/', (req, res) => {
